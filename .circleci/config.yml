@@ -23,6 +23,7 @@ jobs:
 
     steps:
       - checkout
+      - run: echo "A first hello from todo list ..."
 
       # Download and cache dependencies
       - restore_cache:
@@ -32,6 +33,7 @@ jobs:
             - v1-dependencies-
 
       - run: gradle dependencies
+      - run: echo "done checking dependencies ..."
 
       - save_cache:
           paths:
@@ -40,3 +42,5 @@ jobs:
 
       # run tests!
       - run: gradle test
+      - run: echo "gradle test is done successfully ..."
+      - run: echo "build is done successfully ..."
