@@ -44,3 +44,7 @@ jobs:
       - run: gradle test
       - run: echo "gradle test is done successfully ..."
       - run: echo "build is done successfully ..."
+
+  acceptance:
+    steps:
+      - run: echo "done running acceptance tests ..."
